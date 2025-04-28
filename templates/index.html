@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>Student Assessment Charts</title>
+  <style>
+    body { font-family: Arial; }
+    .chart { margin: 30px; page-break-after: always; }
+    img { max-width: 100%; }
+  </style>
+</head>
+<body>
+  {% for name, path in charts %}
+    <div class="chart">
+      <h2>{{ name }}</h2>
+      <img src="{{ path }}" alt="Chart for {{ name }}">
+    </div>
+  {% endfor %}
+</body>
+</html>
