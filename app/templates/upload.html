@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Upload Google Sheet{% endblock %}
+{% block content %}
+<h1>Upload Google Sheet</h1>
+<form method="POST">
+  <label for="sheet_url">Paste Google Sheet Link:</label>
+  <input type="text" id="sheet_url" name="sheet_url" required style="width: 50%;">
+  <br><br>
+  <button type="submit">Generate Charts</button>
+</form>
+{% endblock %}
