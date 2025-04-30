@@ -5,7 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 def fetch_sheet_as_csv(sheet_url, local_filename="temp_sheet.csv"):
     # Set up the service account
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("your-service-account.json", scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
     client = gspread.authorize(creds)
 
     # Extract the Sheet ID from URL
